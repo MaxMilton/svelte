@@ -59,10 +59,10 @@
 	}
 </style>
 
-<div class="prop-editor" class:error title="{error && error.message}">
+<div class="prop-editor" class:error title="{error && error.message || ''}">
 	<CodeMirror
 		mode="json"
-		code={stringify(value)}
+		{code}
 		lineNumbers={false}
 		on:change={handleChange}
 		tab={false}
